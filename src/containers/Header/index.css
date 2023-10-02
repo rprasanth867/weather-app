@@ -1,0 +1,41 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center
+}
+
+header .header-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+  header .header-logo-wrapper {
+    border-bottom: 1px solid blue;
+    margin-bottom: 10px;
+  }
+}
+
+header h1, header p {
+  margin: 0px;
+}
+
+header .header-nav-links-wrapper a {
+  margin: 0px 10px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+}
+
+header .header-nav-links-wrapper a:hover {
+  color: rgb(112, 163, 221);
+}
+
+main {
+  padding: 20px;
+}

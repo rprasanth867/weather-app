@@ -9,10 +9,12 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
+    publicPath: '/'
   },
   devServer: {
     static: './dist',
+    historyApiFallback: true
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss']
