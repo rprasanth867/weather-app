@@ -2,18 +2,18 @@ import React from "react";
 import "./index.css";
 import CityInput from "../CityInput";
 
-function MainWeatherWindow() {
+function MainWeatherWindow({cityName, data, makeCallData, isError}) {
   const renderRightContent = () => {
-    if (true) {
+    if (!cityName) {
       return <h1 className="title">Weather Forecast</h1>
     }
 
     return (
       <>
         <span className="today">Today</span>
-        <h1 className="city-name">Hyderabad</h1>
-        <p>Temparature: 27 C</p>
-        <p>Scattered clouds</p>
+        <h1 className="city-name">{cityName}</h1>
+        <p>Temperature: {data ? Math.round(data.temp - 273.15) : 0}°C</p>
+        <p>{data ? data.weather_desc.toLowerCase() : ''}</p>
       </>
     )
   };
@@ -21,12 +21,16 @@ function MainWeatherWindow() {
   return (
     <section className="weather-top-container">
       <div className="weather-details">
-        <img src={require("../../images/02d.svg")} alt="Sun" />
+        <img src={cityName
+          ? require(`../../images/${data.icon}.svg`)
+          : require("../../images/02d.svg") 
+          }
+          alt="Sun" />
         <div>
           {renderRightContent()}
         </div>
       </div>
-      <CityInput />
+      <CityInput isError={isError} isDataAvailable={cityName} makeCallData={makeCallData} />
     </section> 
   )
 }
