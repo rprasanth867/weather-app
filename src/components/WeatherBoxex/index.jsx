@@ -2,8 +2,9 @@ import React from "react";
 import "./index.css";
 
 function WeatherBoxes({days}) {
+  const isSmall = window.innerWidth < 600;
   const styles = {
-    top: '-55px'
+    top: isSmall ? '0px' : '-55px'
   };
 
   const getDay = date => {

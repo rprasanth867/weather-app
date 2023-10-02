@@ -15,8 +15,11 @@ function CityInput({isDataAvailable, makeCallData, isError}) {
     }
   };
 
+  const isSmall = window.innerWidth < 600;
+
   const styles = {
-    top: isDataAvailable ? '-270px' : '-20px'
+    top: isSmall ? isDataAvailable ? '-385px' : '-270px'
+      : isDataAvailable  ? '-270px' : '-20px'
   };
 
   return (

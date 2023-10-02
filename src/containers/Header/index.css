@@ -19,7 +19,10 @@ header .header-logo-wrapper {
   gap: 10px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  main {
+    min-height: 100vh;
+  }
   header {
     flex-direction: column;
   }

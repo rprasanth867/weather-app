@@ -25,3 +25,16 @@
 .weather-boxes-wrapper li p {
   margin: 0px;
 }
+
+@media (max-width: 600px) {
+  .weather-boxes-wrapper {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .weather-boxes-wrapper li {
+    width: calc(50% - 25px);
+  }
+  .weather-boxes-wrapper li img {
+    width: 50px;
+  }
+}

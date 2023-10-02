@@ -6,6 +6,8 @@
   padding:20px;
   background-color: rgb(255, 255, 255, 0.2);
   box-shadow: 0px 0px 10px silver;
+  max-width: 700px;
+  width: 100%;
 }
 
 .weather-details {
@@ -37,4 +39,15 @@
 .weather-details .city-name {
   font-size: 40px;
   margin: 0px;
+}
+
+@media (max-width: 600px) {
+  .weather-details {
+    width: auto;
+    grid-template-columns: auto;
+  }
+  .weather-details .title {
+    font-size: 30px;
+    margin: 0px;
+  }
 }
