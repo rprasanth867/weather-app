@@ -1,0 +1,35 @@
+.weather-top-container {
+  border: 1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:20px;
+}
+
+.weather-details {
+  gap: 20px;
+  width: 700px;
+  color: #365a7a;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.weather-details img {
+  width: 50%;
+  max-width: 200px;
+  margin: auto;
+}
+
+.weather-details .title {
+  font-size: 60px;
+}
+
+.weather-details .today {
+  font-size: 20px;
+}
+
+.weather-details .city-name {
+  font-size: 40px;
+  margin: 0px;
+}

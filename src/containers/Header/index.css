@@ -1,3 +1,12 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../../images/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -36,6 +45,7 @@ header .header-nav-links-wrapper a:hover {
   color: rgb(112, 163, 221);
 }
 
-main {
+.content-section {
   padding: 20px;
+  flex-grow: 1;
 }

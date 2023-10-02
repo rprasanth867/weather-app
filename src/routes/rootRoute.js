@@ -7,7 +7,7 @@ import Weather from "../pages/Weather";
 export const routes = createBrowserRouter([
   {
     path: '',
-    element: <><Header /><main><Outlet /></main></>,
+    element: <main><Header /><section className="content-section"><Outlet /></section></main>,
     children: [
       {
         path: '',
